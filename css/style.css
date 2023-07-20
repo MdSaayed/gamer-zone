@@ -41,6 +41,7 @@ body{
     font-size: 0.8rem;
     display: inline-block;
     text-transform: uppercase;
+    margin-left: 0.7rem;
     
 }
 .section-title{
@@ -130,9 +131,10 @@ header .nav-items li a{
     padding: 30px 80px;
 }
 .hero{
-    background: url('../images/bg-career.png');
+    background: url('../images/hero-bg.png');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left top;
+    background-size: contain;
 }
 .hero .container{
     display: flex;
@@ -171,14 +173,20 @@ header .nav-items li a{
     color: var(--dark-color);
     font-family: var(--work-sans-font);
     text-decoration: none;
-    padding: 0.4rem 0rem;
+    padding: 0.2rem 0rem;
     display: inline-block;
+    font-weight: 500;
+    line-height: 20px;
 }
 .hero .game-featured-hero li i{
     font-size: 10px;
     padding: 4px;
     border-radius: 50%;
     margin-right: 5px;
+}
+.fa-arrow-alt-circle-down:before, .fa-circle-down:before {
+    content: "\f358";
+    color: red;
 }
 .hero .img-box{
     width: 50%;
@@ -196,6 +204,8 @@ header .nav-items li a{
 }
 .gamer-banner .container .img-box,.gamer-banner .container .banner-text{
     width: 50%;
+    display: flex;
+    align-items: center;
 }
 .banner-text{
     text-align: end;
@@ -280,7 +290,7 @@ header .nav-items li a{
  }
 .download-content .img-box img{
     width: 100%;
-    height: 80vh;
+    height: 650px;
  }
 .download-text{
     display: flex;
@@ -319,7 +329,7 @@ header .nav-items li a{
  }
 .play-content .img-box img{
     width: 100%;
-    height: 80vh;
+    height: 650px;
  }
 .play-text{
     display: flex;
@@ -435,6 +445,12 @@ header .nav-items li a{
     padding: 2px 10px;
     border-radius: 50px;
 }
+.games .game-box:hover {
+    border:1px solid var(--primary-color);
+}
+.games .game-box:hover .game-name {
+    color:var(--primary-color);
+}
 .games .game-box img{
     width: 40px;
     height: 40px;
@@ -477,7 +493,9 @@ footer{
     display: flex;
     column-gap: 2rem;
     list-style: none;
+    flex-wrap: wrap;
     padding: 1rem 0rem;
+    justify-content: center;
 }
 .footer-content .quik-links a{
     color: var(--white);
@@ -565,7 +583,7 @@ footer{
     }
     .download-content .img-box img {
         width: 100%;
-        height: 45vh;
+        height: 295px;
     }
     .download-text {
         display: flex;
@@ -584,6 +602,9 @@ footer{
         display: flex;
         flex-direction: column;
     }
+    .gamer-banner .text {
+        text-align: center;
+    }
     .banner-qute {
         text-align: center;
     }
@@ -600,7 +621,9 @@ footer{
         line-height: 30px;
         text-align: center;
     }
-   
+    .careers {
+        background-position: bottom;
+    }
 
     .career-content {
         grid-template-columns:1fr;
@@ -620,16 +643,16 @@ footer{
         position: absolute;
         bottom: -80px;
         right: -104px;
-        height: 200px;
-        width: 165px;
+        height: 165px;
+        width: 135px;
 
     }
     .game-download .img-box .talking-agel {
         position: absolute;
         bottom: -80px;
         left: -53px;
-        height: 200px;
-        width: 165px;
+        height: 165px;
+        width: 135px;
     }
    
 
@@ -649,7 +672,7 @@ footer{
     }
     .play-content .img-box img {
         width: 100%;
-        height: 45vh;
+        height: 295px;
     }
     .play-text {
         display: flex;
@@ -657,6 +680,7 @@ footer{
         text-align: left;
         justify-content: center;
         padding: 0;
+        width: 100%;
     }
     .game-play .img-box .talking-agel {
         bottom: -80px;
