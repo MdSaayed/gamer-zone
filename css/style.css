@@ -557,6 +557,9 @@ footer{
         flex-direction: column;
         flex-flow: column-reverse;
     }
+    .hero {
+        background-position: left bottom;
+    }
     .hero-container {
         padding: 30px 80px;
     }
